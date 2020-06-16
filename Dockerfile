@@ -2,7 +2,8 @@ FROM jupyter/base-notebook
 
 USER root
 RUN apt-get update && apt-get install --no-install-recommends -y \
-    bash-completion
+    bash-completion \
+    git
 
 USER jovyan
 RUN  pip install nbgitpuller bash_kernel && \
